@@ -41,13 +41,13 @@ RCON_PASSWORD=""
 ## Mods
 In the same directory as your startup script create a Mods folder and install your mods there. Then make your mods.cfg file
 
-Then add `-v ./Mods:/opt/KAG/Mods -v ./mods.cfg:/opt/KAG/mods.cfg` to your command.
+Then add `-v Mods:/opt/KAG/Mods -v mods.cfg:/opt/KAG/mods.cfg` to your command.
 
 ## Security
 Create a Security directory in the same location as your startup script then add
-`-v ./Security:/opt/KAG/Security` to your command.
+`-v Security:/opt/KAG/Security` to your command.
 
 ## autoconfig
 If you need to change the autoconfig beyond what the environment variables can do, you can create an autoconfig.cfg file in the same location as your script.
 
-`-v ./autoconfig.cfg:/opt/KAG/autoconfig.cfg`
+`-v autoconfig.cfg:/opt/KAG/autoconfig.cfg`
