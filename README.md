@@ -1,13 +1,13 @@
 # Running
 Create a script to start the docker container with the correct parameters
 
-docker run --rm -d -p 50301:50301 kag-dedicatedserver:latest
+docker run --rm -d -p 50301:50301 harrisonmiller/kag-dedicatedserver:latest
 
 # Configuration
 Use the environment variables as needed to configure the basics of your server
 
 docker run --rm -d -p 50301:50301 -e NAME="Verra's CTF" \
-	-e DESCRIPTION="Vanilla CTF server hosted by Verra" harrisonmiller:kag-dedicatedserver:latest
+	-e DESCRIPTION="Vanilla CTF server hosted by Verra" harrisonmiller/kag-dedicatedserver:latest
 
 Additional environment variables and their defaults
 ```
