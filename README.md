@@ -3,6 +3,10 @@ Create a script to start the docker container with the correct parameters
 
 docker run --rm -d -p 50301:50301 harrisonmiller/kag-dedicatedserver:latest
 
+You can copy the example script run.sh and the Security folder.
+The security folder contains the Official KAG Server Admin Seclev.
+You should also add your own name to the superadmin.cfg
+
 # Configuration
 Use the environment variables as needed to configure the basics of your server
 
