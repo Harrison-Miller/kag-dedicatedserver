@@ -1,3 +1,15 @@
+# Installing
+First you need to install the docker daemon on your server.
+If your server is running debian/ubuntu you can simply do
+`sudo apt-get install docker.io -y && sudo systemctl start docker`
+
+Then clone the repository
+`git clone https://github.com/Harrison-Miller/kag-dedicatedserver.git`
+`cd kag-dedicatedserver`
+
+modify run.sh to have the proper configuration following the instruction below.
+Then start your server with `./run.sh`
+
 # Running
 Create a script to start the docker container with the correct parameters
 
