@@ -24,7 +24,7 @@ COPY --from=build /opt/KAG /opt/KAG
 
 RUN chmod +x /opt/KAG/dedicatedserver.sh && chmod +x /opt/KAG/KAGdedi
 
-ADD bin/entrypoint.sh /entrypoint.sh
+ADD bin/entrypoint.sh /opt/KAG/entrypoint.sh
 ADD bin/autoconfig.cfg /opt/KAG/autoconfig.cfg.tmpl
 
 EXPOSE 50301/tcp
@@ -39,5 +39,7 @@ ENV MAPCYCLE ""
 ENV SV_PASSWORD ""
 ENV RCON_PASSWORD ""
 
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["dedicatedserver.sh"]
+WORKDIR /opt/KAG
+
+ENTRYPOINT ["./entrypoint.sh"]
+CMD ["./dedicatedserver.sh"]
