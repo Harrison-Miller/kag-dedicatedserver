@@ -1,0 +1,21 @@
+version: '2.0'
+
+services:
+  server:
+    container_name: kag-dedicatedserver
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kag-dedicatedserver:latest
+    environment:
+      - GAMEMODE=CTF
+      - NAME=Default Server
+      - DESCRIPTION=
+      - MAX_PLAYERS=20
+      - MAPCYCLE=
+      - SV_PASSWORD=prettysecret
+      - RCON_PASSWORD=supersecret
+    restart: unless-stopped
+    ports:
+      - 50301:50301
+      - 50301:50301/udp
