@@ -15,6 +15,10 @@ services:
       - MAPCYCLE=
       - SV_PASSWORD=prettysecret
       - RCON_PASSWORD=supersecret
+    volumes:
+      - ./Security:/opt/KAG/Security
+#      - ./Mods:/opt/KAG/Mods
+#      - ./mods.cfg:/opt/KAG/mods.cfg
     restart: unless-stopped
     ports:
       - 50301:50301
