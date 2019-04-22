@@ -23,6 +23,7 @@ if [[ ! -f /opt/KAG/autoconfig.cfg ]]; then
 	sed -i "s/MAPCYCLE/$MAPCYCLE/g" /opt/KAG/autoconfig.cfg
 	sed -i "s/SV_PASSWORD/$SV_PASSWORD/g" /opt/KAG/autoconfig.cfg
 	sed -i "s/RCON_PASSWORD/$RCON_PASSWORD/g" /opt/KAG/autoconfig.cfg
+	sed -i "s/PORT/$PORT/g" /opt/KAG/autoconfig.cfg
 fi
 
 exec "$@"
